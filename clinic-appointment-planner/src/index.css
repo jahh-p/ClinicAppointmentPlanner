@@ -54,6 +54,25 @@ body {
   margin: 0;
 }
 
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#appointments {
+  background: #faf9f7;
+}
+
+#calendar {
+  background: #e8e6e3;
+}
+
+#patients {
+  background: #f0f0f0;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
