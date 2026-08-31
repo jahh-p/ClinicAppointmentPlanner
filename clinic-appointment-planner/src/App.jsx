@@ -19,12 +19,13 @@ return (
       <section id="appointments">
         <div
           style={{
-            maxWidth: '900px',
-            padding: '1000px 10000px',
+            maxWidth: '600px',
+            padding: '400px 900px',
             textAlign: 'top',
           }}
         >
           <h1>Appointments</h1>
+          <br></br>
           <p>Appointment scheduling interface will go here</p>
           <BookingForm />
         </div>

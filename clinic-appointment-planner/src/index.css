@@ -93,7 +93,7 @@ h2 {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 80px;
   letter-spacing: -1.68px;
   margin: 32px 0;
   @media (max-width: 1024px) {
@@ -133,4 +133,9 @@ code {
   color:black;
   font-size: 20px;
   text-align: center;
+}
+
+#Button{
+  width: 100px;   /* Sets fixed width */
+  height: 40px; 
 }

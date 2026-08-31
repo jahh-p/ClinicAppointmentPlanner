@@ -69,7 +69,7 @@ export default function Navigation() {
                   bottom: '-4px',
                   left: 0,
                   width: '0%',
-                  height: '2px',
+                  height: '5px',
                   background: 'var(--accent)',
                   transition: 'width 0.3s',
                 }}

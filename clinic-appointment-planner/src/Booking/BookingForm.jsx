@@ -1,14 +1,17 @@
 import {useState} from "react"
 
 export default function BookingForm(){
+    const [cases, setCase]= useState(false);
     const [data, setData]= useState({
         name:"",
         birthdate: "",
         age: "",
-        address: ""
+        address: "",
+        condition: ""
 
     })
-    
+
+
     function handleSubmit(e)
     {
       e.preventDefault()
@@ -22,6 +25,8 @@ export default function BookingForm(){
         birthdate: "",
         age: "",
         address: ""})
+        
+        setCase(true);
             e.preventDefault()
     }
     
@@ -49,12 +54,47 @@ export default function BookingForm(){
     type="number"
     name="age"
     value={data.age}
+    TabIndex={0}
     onChange = {handleChange}/>
-     
-    
-     <label htmlFor= "submit">Submit Form</label>
-    <button id = "submit" type="submit" >submit</button>
+<br></br>
+    <label htmlFor = "birthdate">Birthdate: </label>
+    <input
+    id ="birthdate"
+    value={data.birthdate}
+    type= "date"
+    name = "birthdate"
+    onChange ={handleChange}
+    TabIndex={0}
+    />
+     <br></br>
+    <label htmlFor = "address">Address: </label>
+    <input
+    id ="address"
+    value={data.address}
+    type= "address"
+    name = "address"
+    onChange ={handleChange}
+    TabIndex={0}
+    />
+     <div style={{ marginBottom: "20px" }}></div>
 
+     <label htmlFor = "condition">Condition: </label>
+    <textarea placeholder="place your condition here"
+    id = "condition"
+    value={data.condition}
+    name = "condition"
+    onChange={handleChange}
+    TabIndex={0}/>
+    <br></br>
+     <label htmlFor= "submit"></label>
+     <br></br>
+     <p>
+    {cases ? "Already Submitted" : "Please Sign In"}
+   </p>
+   
+    <button id ="Button" type="submit">Submit</button>
+
+    
     </form>
     </div>
     </>)
