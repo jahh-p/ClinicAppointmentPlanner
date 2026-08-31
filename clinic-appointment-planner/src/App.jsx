@@ -1,7 +1,7 @@
 
 import logo from "./logo-pictures/logo.jpg"
 import Navigation from "./Navigation"
-
+import BookingForm from "./Booking/BookingForm.jsx"
 
 export default function App() {
 
@@ -19,13 +19,14 @@ return (
       <section id="appointments">
         <div
           style={{
-            maxWidth: '800px',
-            padding: '40px 20px',
-            textAlign: 'center',
+            maxWidth: '900px',
+            padding: '1000px 10000px',
+            textAlign: 'top',
           }}
         >
           <h1>Appointments</h1>
           <p>Appointment scheduling interface will go here</p>
+          <BookingForm />
         </div>
       </section>
 
