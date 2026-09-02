@@ -2,10 +2,13 @@
 import logo from "./logo-pictures/logo.jpg"
 import Navigation from "./Navigation"
 import BookingForm from "./Booking/BookingForm.jsx"
+import AppointmentCard from "./Booking/AppointmentCard.jsx"
 
 export default function App() {
-
-
+const [appointmentData, setAppointmentData]=useState(null)
+function handleBookingSubmit(submittedData){
+     setAppointmentData(submittedData)
+}
 return (
     <>
       <Navigation />
@@ -27,7 +30,11 @@ return (
           <h1>Appointments</h1>
           <br></br>
           <p>Appointment scheduling interface will go here</p>
-          <BookingForm />
+          <BookingForm onBook={handleBookingSubmit}/>
+          <br>
+          </br>
+
+          <AppointmentCard appointments ={appointmentData}/>
         </div>
       </section>
 
