@@ -3,6 +3,7 @@ import logo from "./logo-pictures/logo.jpg"
 import Navigation from "./Navigation"
 import BookingForm from "./Booking/BookingForm.jsx"
 import AppointmentCard from "./Booking/AppointmentCard.jsx"
+import {useState} from "react"
 
 export default function App() {
 const [appointmentData, setAppointmentData]=useState(null)
