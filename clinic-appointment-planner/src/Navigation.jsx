@@ -24,7 +24,7 @@ export default function Navigation() {
           }}
         >
           <img
-            src="/logo-pictures/logo.jpg"
+            src="/logo-pictures/miniLogo.jpg"
             alt="clinic logo"
             width="40"
             height="40"
