@@ -39,7 +39,7 @@ return (
         </div>
       </section>
 
-      <section id="calendar">
+      <section id="services">
         <div
           style={{
             maxWidth: '800px',
@@ -47,8 +47,8 @@ return (
             textAlign: 'center',
           }}
         >
-          <h1>Calendar</h1>
-          <p>Calendar view will go here</p>
+          <h1>List Of Services</h1>
+          <Services />
         </div>
       </section>
 
@@ -61,7 +61,7 @@ return (
           }}
         >
           <h1>Patients</h1>
-          <p>Patient list will go here</p>
+          <p>Patient Placeholder</p>
         </div>
       </section>
     </>
