@@ -48,7 +48,6 @@ return (
           }}
         >
           <h1>List Of Services</h1>
-          <Services />
         </div>
       </section>
 

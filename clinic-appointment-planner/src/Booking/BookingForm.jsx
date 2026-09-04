@@ -1,6 +1,8 @@
 import { useState } from "react";
+import FacialTreatments from "../logo-pictures/FacialTreatment.jpg";
+import Service from "./Services.jsx";
 
-export default function BookingForm({onBook}) {
+export default function BookingForm({ onBook }) {
   const [cases, setCase] = useState(false);
   const [data, setData] = useState({
     name: "",
@@ -11,12 +13,31 @@ export default function BookingForm({onBook}) {
   });
 
   const serviceOptions = [
-    "Facial Treatment",
-    "Skin Consultation",
-    "Laser Treatment",
-    "Body Treatment",
+    {
+      id: 1,
+      name: "Facial Treatment",
+      price: 1000,
+      image: FacialTreatments,
+    },
+    {
+      id: 2,
+      name: "Skin Consultation",
+      price: 1000,
+      image: null,
+    },
+    {
+      id: 3,
+      name: "Laser Treatment",
+      price: 1200,
+      image: null,
+    },
+    {
+      id: 4,
+      name: "Body Treatment",
+      price: 1200,
+      image: null,
+    },
   ];
-
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -25,16 +46,16 @@ export default function BookingForm({onBook}) {
       alert("You are not qualified to be using this form");
       return;
     }
-    
-    onBook(data)
+
+    onBook(data);
 
     setData({
-    name: "",
-    services: "",
-    age: "",
-    appointment: "",
-    condition: "",
-  });
+      name: "",
+      services: "",
+      age: "",
+      appointment: "",
+      condition: "",
+    });
 
     setCase(true);
     e.preventDefault();
@@ -72,14 +93,11 @@ export default function BookingForm({onBook}) {
           />
           <br></br>
           <label htmlFor="services">Services: </label>
-          <select value={data.services} name = "services" onChange ={handleChange}>
-            <option value="services">--Select Specific Service--</option>
-            {serviceOptions.map(function(s){
-                return(
-                    <option key={s} value={s}>{s}</option>
-                )
-            })}
-          </select>
+          <Service
+            options={serviceOptions}
+            value={data.services}
+            onChange={handleChange}
+          />
           <br></br>
           <label htmlFor="appointment">Appointment: </label>
           <input
